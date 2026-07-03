@@ -1,0 +1,44 @@
+Activity 1: Record-Triggered Flow – High Priority Student Application Notification
+Objective: Automatically notify the Enrollment Owner (Counselor) when a student application is identified as high priority by AI. 
+Trigger Condition: AI_Priority_Score__c ≥ 80 
+Steps: 
+1. From Setup, in the Quick Find box, search for Flows.
+2. Click New Flow.
+3. Select Category: Triggered.
+    Select Type: Record-Triggered Flow.
+    Select Object: Student_Enrollment__c.
+    Configure Trigger: When a record is created or updated.
+4. Set Entry Conditions:
+    Field: AI_Priority_Score__c
+    Operator: Greater than or Equal
+    Value: 80
+5. Select Run Every time a record is created and meets the condition requirements.
+6. Optimize the flow for Actions and Related Records.
+7. Click on the + icon and add Send Email Alert action.
+8. Select Email Alert: High Priority Student Application Email Alert.
+9. Enter the Label as: High Priority Student Application Notification.
+10. Map RecordId to the Record Id field.
+11. Save the Flow and Activate.
+
+
+Activity 2: Record-Triggered Flow – High Discount Enrollment Submission for Approval
+Objective: Automatically submit a student enrollment for approval when a high discount is applied. 
+Trigger Condition: Discount__c > 30
+Steps:
+1. From Setup, in the Quick Find box, search for Flows.
+2. Click New Flow.
+3. Select Category: Triggered.
+4. Select Type: Record-Triggered Flow.
+5. Select Object: Student_Enrollment__c.
+6. Configure Trigger: When a record is created or updated.
+7. Set Entry Conditions:
+    Field: Discount__c
+    Operator: Greater than
+    Value: 30
+8. Select Run Every time a record is created and meets the condition requirements.
+9. Optimize the flow for Actions and Related Records.
+10.Click on the + icon and add Submit for Approval action.
+11.Select Approval Process: High Discount Student Enrollment Approval.
+12.Enter the Label as: Submit Enrollment for Approval.
+13.Map RecordId to the Record Id field.
+14.Save the Flow and Activate.
