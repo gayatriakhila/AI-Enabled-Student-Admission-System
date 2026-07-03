@@ -1,0 +1,21 @@
+Activity 1: Creation of Picklist field for Contact object:
+
+1. Go to Setup → Click on Object Manager
+2. Type object name Contact in the Quick Find box → Click on Contact 
+3. Click on Fields & Relationships 
+4. Click on New 
+5. Select Data Type as Picklist and click Next 
+6. Enter the Field Label as Education Level 
+7. Click on Enter values and enter: a. Graduation b. UG c. Diploma 
+8. Click Next, Next, and Save
+
+Activity 2: Creation of Lookup field for Opportunity Object:
+
+Go to the Setup page >> click on Object manager >> type object name (Opportunity) in the quick find bar >> click on the Opportunity object.
+Click on Fields & Relationship
+Click on New.
+Select “Lookup relationship” as data type and click Next.
+Select the related object “User”.
+Click on Next.
+Give Field Label as “Counselor Assigned”.
+Click on Next, Next, Next, Save.
