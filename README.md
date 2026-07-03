@@ -228,6 +228,11 @@ AI-Student-Admission-System/
 ```
 
 ---
+## 🎥 Project Demo
+
+🎥 [Project Demo Video](https://drive.google.com/drive/folders/1N-p7F2xA-DCu0UYQdClU3p3PoSM4NPSj?usp=sharing)
+
+---
 
 ## 🎯 Future Enhancements
 
