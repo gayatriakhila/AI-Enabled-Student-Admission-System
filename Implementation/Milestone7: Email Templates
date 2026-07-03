@@ -1,0 +1,71 @@
+Activity1: Create a High Priority Student Application Notification Email Template 
+Purpose: Notify the Counselor when a student application is identified as high priority by AI and requires immediate attention.
+
+1. Go to Setup (gear icon on top-right).
+2. In the Quick Find box, type Email Templates.
+3. Click on Classic Email Templates.
+4. Click New Template. Choose the type: Text – Plain text (no formatting) 
+5. Click Next 
+
+Template Name: High Priority Student Application Notification 
+Subject: High-Priority Student Application Assigned to You 
+Body: Hello {!Student_Enrollment__c.OwnerFullName},
+A student application has been identified as high priority by AI and requires immediate attention.
+Student Application Details:
+Student Name: {!Student_Enrollment__c.Student__r.Name}
+Course Applied: {!Student_Enrollment__c.Course__r.Name}
+AI Priority Score: {!Student_Enrollment__c.AI_Priority_Score__c}
+Enrollment Date: {!Student_Enrollment__c.Enrollment_Date__c}
+Please contact the student and proceed with the admission process within 24 hours.
+Thank you, AI-Enabled Student Admissions System 
+
+6. Click on save
+
+Activity2: Create a High Discount Student Enrollment Approval Email Template 
+Purpose: Notify the Manager when a student enrollment with a high discount is submitted for approval.
+
+1. Go to Setup (gear icon on top-right).
+2. In the Quick Find box, type Email Templates.
+3. Click on Classic Email Templates.
+4. Click New Template. Choose the type: Text – Plain text (no formatting) 
+5. Click Next 
+
+Template Name: High Discount Student Enrollment Approval Notification 
+Subject: Student Enrollment Awaiting Discount Approval 
+Body: Hello {!Student_Enrollment__c.OwnerFullName},
+A student enrollment with a high discount has been submitted for your approval.
+Enrollment Details:
+Student Name: {!Student_Enrollment__c.Student__r.Name}
+Course Name: {!Student_Enrollment__c.Course__r.Name}
+Course Fee: {!Student_Enrollment__c.Course__r.Course_Fee__c}
+Discount Percentage: {!Student_Enrollment__c.Discount__c}%
+Final Payable Amount: {!Student_Enrollment__c.Final_Payable_Amount__c}
+Please review the enrollment details and approve or reject the request accordingly.
+Thank you, Student Admissions Approval System 
+
+6. Click on save
+
+Activity3: Create a Student Enrollment Approval Outcome Notification Email Template 
+Purpose: Notify the Counselor (Enrollment Owner) when a student enrollment is approved or rejected by the manager.
+
+1. Go to Setup (gear icon on top-right).
+2. In the Quick Find box, type Email Templates.
+3. Click on Classic Email Templates.
+4. Click New Template. 
+5. Choose the type: Text – Plain text (no formatting) 
+6. Click Next 
+
+Template Name: Student Enrollment Approval Status Notification 
+Subject: Student Enrollment Approval Decision \
+Body: Hello {!Student_Enrollment__c.OwnerFullName},
+The approval process for a student enrollment has been completed.
+Enrollment Summary:
+Student Name: {!Student_Enrollment__c.Student__r.Name}
+Course Name: {!Student_Enrollment__c.Course__r.Name}
+Approval Status: {!Student_Enrollment__c.Approval_Status__c}
+Final Payable Amount: {!Student_Enrollment__c.Final_Payable_Amount__c}
+Please proceed with the next steps in the admission process based on the approval outcome.
+Thank you, Student Admissions Management System 
+
+7.Click on save
+
