@@ -1,0 +1,43 @@
+Activity1: Create High Priority Lead Email Alert
+Steps:
+1. In the quick find box, search for email alerts.
+2. Click on email alerts
+3. Click on Continue
+4. Click on New Email Alert
+5. Give the Description as High Priority Student Application Email Alert
+6. Unique Name will be auto populated
+7. Select the object as Student Enrollment
+8. Select the High Priority Student Application Notification Email Template
+9. For Recipient Type User and Select Student Enrollment Owner
+10.Click on Save.
+
+Activity2: Create High Discount Student Enrollment Approval Email Alert
+Steps:
+1. In the quick find box, search for email alerts.
+2. Click on email alerts
+3. Click on Continue
+4. Click on New Email Template
+5. Give the Description as High Discount Enrollment Approval Email Alert
+6. Unique Name will be auto populated
+7. Select the object as Student Enrollment
+8. Select the High Discount Student Enrollment Approval Notification
+9. For Recipient Type User and Select Manager
+10.Click on Save.
+
+
+Activity3: Create Student Enrollment Approval Status Email Alert 
+Steps: 
+1. In the Quick Find box, search for Email Alerts.
+2. Click on Email Alerts.
+3. Click on Continue.
+4. Click on New Email Alert.
+
+Email Alert Details:
+Description: Student Enrollment Approval Status Email Alert
+Unique Name: Auto populated
+Object: Student_Enrollment__c
+Email Template: Student Enrollment Approval Status Notification
+Recipient Type: User
+Recipient: Enrollment Owner (Counselor)
+
+5. Click on Save.
