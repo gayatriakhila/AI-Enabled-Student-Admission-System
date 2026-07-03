@@ -1,0 +1,37 @@
+Activity 1: To create a Validation rule to Course Object
+
+1. Go to setup >> click on Object Manager >> type object name (Course) in search bar >> click on the Course object
+2. Click on the validation rule >> click on New.
+3. Enter the Rule name as “Course Fee Validation”.
+4. Select Active
+5. Insert the Error Condition Formula as:
+6. Course_Fee__c <= 0 6. 
+7. Enter the Error Message as “Course Fee must be greater than zero”. 
+8. Select the Error location as Top of the page 
+9. Click Save.
+
+Activity 2: To create a Validation rule to Opportunity Object
+
+Validation Rule on Start Date:
+
+Go to setup >> click on Object Manager >> type object name (Opportunity) in search bar >> click on the Opportunity object
+1. Click on the validation rule >> click on New.
+2. Enter the Rule name as “Start Date Validation”.
+3. Select Active
+4. Insert the Error Condition Formula as: Expected_Start_Date < TODAY()
+5. Enter the Error Message as “Expected Start Date cannot be in the past.”
+6. Select the Error location as Top of the page
+7. Click Save.
+
+Activity 3: To create a Validation rule on Student Enrollment Object
+
+Validation Rule on Discount Percentage:
+
+Go to setup >> click on Object Manager >> type object name (Student Enrollment) in search bar >> click on the Student Enrollment object
+1. Click on the validation rule >> click on New.
+2. Enter the Rule name as “Discount Percent Validation”.
+3. Select Active
+4. Insert the Error Condition Formula as: Discount_Percentage__c > 50
+5. Enter the Error Message as “Discount cannot be greater than 50%”.
+6. Select the Error location as Top of the page
+7. Click Save.
