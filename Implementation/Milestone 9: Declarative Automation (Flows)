@@ -42,3 +42,48 @@ Steps:
 12.Enter the Label as: Submit Enrollment for Approval.
 13.Map RecordId to the Record Id field.
 14.Save the Flow and Activate.
+
+Activity 3: Scheduled-Triggered Flow – Pending Enrollment Follow-Up 
+Objective: Automatically identify student enrollments that are pending approval for more than 2 days and notify the counselor. 
+Schedule Condition: Runs daily 
+Steps: 
+1. From Setup, in the Quick Find box, search for Flows.
+2. Click New Flow.
+3. Select Category: Triggered.
+4. Select Type: Scheduled-Triggered Flow.
+5. Set the Start Date and Time (for example: Today, 9:00 AM).
+6. Set Frequency: Daily.
+7. Select Object: Student_Enrollment__c.
+8. Set Condition Requirements:
+Approval_Status__c Equals Pending
+9. Set Additional Condition:
+        LastModifiedDate Less than TODAY() – 2
+10.Optimize the flow for Actions and Related Records.
+11.Click on the + icon and add Send Email Alert action.
+12.Select Email Alert: Student Enrollment Approval Status Email Alert.
+13.Enter the Label as: Pending Enrollment Reminder.
+14.Map RecordId to the Record Id field.
+15.Save the Flow and Activate.
+
+
+Activity 4: Screen Flow – Student Enrollment Creation Wizard
+Objective: Provide a guided, user-friendly screen-based process for counselors to create student enrollments.
+Steps: 
+1. From Setup, in the Quick Find box, search for Flows.
+2. Click New Flow.
+3. Select Category: Screen Flow.
+4. Click Create.
+5. Add a Screen element:
+6. Screen Name: Student Details
+7. Fields: Student, Course, Enrollment Date
+8. Add another Screen element:
+        Screen Name: Fee & Discount
+        Fields: Course Fee (Display), Discount
+9. Add a Formula / Assignment:
+    Calculate Final Payable Amount
+10. Add a Create Records element:
+11. Create Student_Enrollment__c record
+12. Add a Confirmation Screen:
+13. Display Enrollment Created Successfully
+14. Save the Flow with name: Student Enrollment Screen Flow.
+15. Activate the Flow.
