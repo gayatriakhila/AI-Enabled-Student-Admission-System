@@ -1,0 +1,19 @@
+Activity 1: Creating a tab for Course Object
+
+Go to the setup page → type Tabs in Quick Find bar
+Click on tabs
+Click on New (under custom object tab).
+Select Object (Course) >> Select the tab style
+Click on Next >> (Add to profiles page) keep it as default >> Click on Next (Add to Custom App) uncheck the include tab.
+Make sure that the Append tab to the user's existing personal customizations is checked.
+Click save
+
+Activity 2: Creating a tab for Student Enrollment Object
+
+Go to the setup page → type Tabs in Quick Find bar
+Click on tabs
+Click on New (under custom object tab).
+Select Object (Student Enrollment) >> Select the tab style
+Click on Next >> (Add to profiles page) keep it as default >> Click on Next (Add to Custom App) uncheck the include tab.
+Make sure that the Append tab to the user's existing personal customizations is checked.
+Click save
