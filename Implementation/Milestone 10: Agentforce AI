@@ -1,0 +1,146 @@
+Phase 2 – Milestone 10: Agentforce AI
+
+Activity 1: Enable Agentforce & AI Trust Settings
+Objective: Enable Agentforce features securely and control AI access.
+
+Steps
+1. Go to Setup.
+2. In the Quick Find box, search for Agentforce.
+3. Click Agentforce Setup.
+4. Click Enable Agentforce.
+5. Go to AI Trust & Permissions.
+6. Enable the following:
+   • Data Masking
+   • Zero Data Retention
+   • Audit Logging
+7. Assign Agentforce access to the following profiles:
+   • System Administrator
+   • Admissions Manager
+8. Click Save.
+
+---
+
+Activity 2: Create Prompt Template – Student Application Summary
+Objective: Generate an AI-based summary of a student enrollment for counselors and managers.
+
+Steps
+1. From Setup, search for Prompt Builder.
+2. Click Prompt Builder.
+3. Click New Prompt Template.
+4. Select Prompt Type: Summary.
+5. Select Object: Student_Enrollment__c.
+6. Enter Prompt Name: Student Application Summary Prompt.
+7. Enter the following prompt content:
+Summarize the student application in simple terms including:
+    • Student name
+    • Course applied
+    • Course fee and discount
+    • Final payable amount
+    • Enrollment status
+    • AI priority score
+
+Highlight any risks or special considerations.
+
+8. Click Save.
+9. Click Activate.
+
+---
+
+Activity 3: Create Prompt Template – Admission Risk Analysis
+Objective: Help managers understand whether a student enrollment is risky or high value.
+
+Steps
+1. Go to Prompt Builder.
+2. Click New Prompt Template.
+3. Select Prompt Type: Flex.
+4. Select Object: Student_Enrollment__c.
+5. Enter Prompt Name: Student Enrollment Risk Analysis Prompt.
+6. Enter the following prompt content:
+
+Analyze this student enrollment and determine:
+
+• Probability of successful admission
+• Financial risk based on discount
+• Overall enrollment health (Low, Medium, High Risk)
+
+Provide recommendations for approval or rejection.
+
+7. Click Save.
+8. Click Activate.
+
+---
+
+Activity 4: Create Admissions AI Agent
+Objective: Create an AI agent to assist counselors and managers during admissions.
+
+Steps
+1. From Setup, search for Agents.
+2. Click Agents.
+3. Click New Agent.
+4. Enter the following details:
+   Agent Name: Admissions Assistant Agent
+   Description: AI agent to assist with student admissions and approvals.
+5. Assign the following topics:
+   • Student Application Summary
+   • Enrollment Risk Analysis
+   • Discount Approval Guidance
+6. Click Next.
+
+---
+
+Activity 5: Configure Agent Actions
+Objective: Allow the agent to take intelligent actions.
+
+Steps
+1. Open the Admissions Assistant Agent configuration.
+2. Go to the Actions section.
+3. Click Add Action.
+4. Add the following actions:
+   • Generate Student Application Summary
+   • Analyze Enrollment Risk
+   • Recommend Approval Decision
+5. Map each action to the corresponding Prompt Template.
+6. Click Save.
+
+---
+
+Activity 6: Configure Agent Data Library
+Objective: Allow Agentforce to answer questions using Salesforce data.
+
+Steps
+1. Open the Admissions Assistant Agent.
+2. Click Data Library.
+3. Add the following objects:
+   • Student__c
+   • Course__c
+   • Student_Enrollment__c
+4. Set Access Level: Read Only.
+5. Enable Field-Level Access Controls.
+6. Click Save.
+
+---
+
+Activity 7: Test the Agent
+Objective: Validate agent responses using real project data.
+
+Steps
+1. Open a Student Enrollment record.
+2. Launch the Admissions Assistant Agent.
+3. Ask the following questions:
+   • "Summarize this student application."
+   • "Is this enrollment safe to approve?"
+   • "What risks are involved in this discount?"
+4. Verify that the responses are accurate and relevant.
+
+---
+
+Activity 8: Deploy Agentforce
+Objective: Make the agent available to users.
+
+Steps
+1. Go to Agent Deployment.
+2. Choose Deployment Type: Lightning Experience.
+3. Assign the deployment to:
+   • Admissions Counselors
+   • Admissions Managers
+4. Click Deploy.
