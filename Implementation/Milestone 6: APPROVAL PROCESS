@@ -1,0 +1,156 @@
+Activity 1: Create an Approval Process for High-Discount Student Enrollment
+
+Note: Before implementing the Approval Process, ensure that the following milestones are completed: Profiles creation (Admin, Counselor, Manager) ; Roles hierarchy setup ; Users creation and role assignment 
+This approval process ensures that student enrollments with high discounts are reviewed and approved by a manager, preventing revenue loss and enforcing business policies. 
+
+Create Classic Email Template 
+This email template will notify the approver when a high-discount enrollment is submitted for approval. 
+Steps to Create Email Template Go to Setup (gear icon on top-right): 
+    1. In the Quick Find box, type Email Templates
+    2. Click on Classic Email Templates
+    3. Click New Template
+
+============================================================
+EMAIL TEMPLATE INFORMATION
+============================================================
+
+Folder:
+Public or Private Folder (Unfiled Public Email Templates for now)
+
+Email Template Name:
+High-Discount Enrollment Approval Notification
+
+Template Unique Name:
+High_Discount_Enrollment_Approval_Notification
+
+Encoding:
+UTF-8
+
+Subject:
+Student Enrollment Awaiting Discount Approval
+
+------------------------------------------------------------
+EMAIL BODY
+------------------------------------------------------------
+
+Dear {!Student_Enrollment__c.OwnerFullName},
+A student enrollment with a high discount has been submitted for your approval.
+Please review the enrollment details below:
+
+Student Enrollment Details:
+----------------------------------------
+Student Name: {!Student_Enrollment__c.Student__r.Name}
+Course Name: {!Student_Enrollment__c.Course__r.Name}
+Course Fee: {!Student_Enrollment__c.Course__r.Course_Fee__c}
+Discount Percentage: {!Student_Enrollment__c.Discount__c}%
+Final Payable Amount: {!Student_Enrollment__c.Final_Payable_Amount__c}
+Enrollment Status: {!Student_Enrollment__c.Enrollment_Status__c}
+Please take the necessary action at your earliest convenience.
+Thank you,
+AI-Enabled Student Admissions System
+
+============================================================
+End of Email Template
+============================================================
+
+Activity: Create the Approval Process
+
+●   In the Quick Find box, type: Approval Processes
+●   Click on "Approval Processes" under Process Automation
+●   Click on the object name: Student Enrollment
+●   Click Create New Approval Process → Use Standard Setup Wizard
+
+Step 1: Basic Settings
+●   Name: High-Discount Student Enrollment Approval
+●   Unique Name: Auto-fills (you can keep it as is)
+●   Click Next
+
+Step2: Specify Entry Criteria:
+This defines when the process will be triggered.
+●   Choose "Criteria are met"
+    Set:
+      o    Field: Student Enrollment→ Discount Percentage
+      o    Operator: Greater than 
+      o    Value: 30
+      o    Field: Student Enrollment→ Enrollment Status
+      o    Operator: Equals
+      o    Value: Submitted for Approval
+●  Click Next
+
+Step 3: Select Approver
+Approver Selection:
+  Choose Automatically assign to approver(s)
+  Select Manager of Record Owner
+  
+Record Editability:
+  Select Administrators ONLY can edit records during the approval process
+  Click Next
+
+Step 4: Email Template Selection
+Approval Assignment Email Template
+    Select High-Discount Enrollment Approval Notification
+    Click Next
+
+Step 5: Select Fields to Display on Approval Page Layout
+You will see:
+    Available Fields (left)
+    Selected Fields (right)
+Suggested Fields to Display
+    Student Name
+    Course Name
+    Discount Percentage
+    Final Payable Amount
+    Enrollment Status
+Use:
+    Add (→) button to move fields
+    Up / Down arrows to arrange display order
+    Click Next
+
+Step 6: Specify Initial Submitters
+This defines who can submit records for approval.
+Steps
+    Search for Owner
+    Add Record Owner to Selected Submitters
+    This allows counselors (record owners) to submit enrollments.
+    Click Save
+
+Step 7: Final Approval Actions
+Open the Approval Process which we have created just now
+This defines what happens after approval.
+
+Create Field Update
+Click Add New → Field Update
+
+================================
+Field Update Details
+================================
+Field --------------- Value
+Name                  Set Enrollment Status to Approved
+Field to Update       Enrollment_Status__c
+New Value             Approved
+Action                Click Save
+
+Step 8: Final Rejection Actions
+This defines what happens if the approval is rejected.
+Create Field Update
+    Click Add New → Field Update
+
+================================
+Field Update Details
+================================
+Field --------------- Value
+Name                  Set Enrollment Status to Rejected
+Field to Update       Enrollment_Status__c
+New Value             Rejected
+Action                Click Save
+
+Step 9: Create an Approval Step
+    Under Approval Steps, Click on New Approval Step
+    Give the Name as Step1
+    Give the Unique Name as Step1
+    Step Number = 1  
+    Click on Next
+    ** Select All Records Should enter this Step
+
+Step 10: Activate the Approval Process Click View Approval Process Detail Page
+    Click Activate (top-right)
