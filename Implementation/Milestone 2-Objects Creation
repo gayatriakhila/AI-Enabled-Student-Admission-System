@@ -1,0 +1,29 @@
+Activity 1: Creating Course Object
+
+To create an object:
+1. From the Setup page
+2. Click on Object Manager
+3. Click on Create >> Custom Object
+4. Enter the Label name as Course
+5. Enter Plural Label name as Courses
+6. Enter Record Name as Course Name
+7. Select Data Type Text
+8. Select Allow Reports
+9. Select Allow Search
+10. Enable Track Field History
+11. Click on Save and New
+
+
+Activity 2: Creating Student Enrollment Object
+
+To create an object:
+From the Setup page
+Click on Object Manager
+Click on Create >> Custom Object
+Enter the Label name as Student Enrollment
+Enter Plural Label name as Student Enrollments
+Enter Record Name as Student Enrollment ID
+Select Data Type as Auto Number: SE - {0000}, Starting with 1
+Select Allow Reports
+Select Allow Search
+Enable Track Field History · Click on Save
