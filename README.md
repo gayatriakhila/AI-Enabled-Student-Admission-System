@@ -1,4 +1,4 @@
-# 🎓 AI-Enabled Student Admission & Support Management System using Salesforce Agentforce
+# 🎓 AI-Enabled Student Admission System (using Salesforce Agentforce)
 
 An AI-powered Salesforce CRM application that streamlines student admissions through automation, intelligent decision-making, and secure data management. The system leverages Salesforce Flow, Approval Processes, Reports, Dashboards, and Agentforce AI to improve admission efficiency and enhance the student support experience.
 
@@ -208,22 +208,34 @@ Included screenshots of:
 ```
 AI-Student-Admission-System/
 │
-├── Documentation/
-│   ├── Project Report.pdf
-│   ├── ER Diagram
-│   ├── DFD
-│   └── Screenshots
-│
-├── Salesforce Metadata/
-│   ├── Objects
-│   ├── Flows
-│   ├── Validation Rules
-│   ├── Approval Processes
-│   ├── Email Templates
-│   └── Reports
-│
-├── Images/
-│
+├── Document/
+│           ├── 1. Ideation Phase
+|           |            ├── Brainstorming- Idea Generation- Prioritization
+|           |            ├── Define Problem Statements
+|           |            └── Empathy Map Canvas
+│           ├── 2. Requirement Analysis
+|           |            ├── Customer Journey Map
+|           |            ├── Data Flow Diagrams and User Stories
+|           |            ├── Solution Requirements
+|           |            └── Technology Stack
+│           ├── 3. Problem Design Phase
+|           |            ├── Problem - Solution Fit
+|           |            ├── Proposed Solution
+|           |            └── Solution Architecture
+│           ├── 4. Project Planning Phase
+|           |            └── Project Planning
+|           ├── 5. Project Development Phase
+|           |            ├── Performance Testing
+|           |            └── UAT Report
+│           └── 6. Project Documentation
+|                        └── Final Report
+├── Project Files
+|                ├── Implementation
+|                ├── Milestone Activities
+|                └── Documentation
+├── Video Demo
+|                ├── Final Project Demo.mp4
+|                └── readme.md
 └── README.md
 ```
 
@@ -268,6 +280,7 @@ Through this project, the following Salesforce concepts were implemented:
 
 **Gayatri Akhila Appala**
 
+Final Year
 B.Tech CSE(Artificial Intelligence & Machine Learning)
 
 Ideal Institute of Technology
